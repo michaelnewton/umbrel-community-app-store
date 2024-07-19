@@ -8,7 +8,7 @@ services:
       APP_PORT: 3000
 
   ks_bridge:
-    image: onemorebsmith/kaspa_bridge:latest
+    image: elldee/kaspa-stratum-bridge:latest
     container_name: ks_bridge
     restart: unless-stopped
     user: "0"
@@ -27,27 +27,4 @@ services:
       - host.docker.internal:host-gateway
 
 volumes:
-
-  
-  version: "3.7"
-
-  services:
-    app_proxy:
-      environment:
-        # The format here is: <app-id>_<docker-service-name>_1
-        APP_HOST: elldeeone-kas-rusty-node_1
-        APP_PORT: 3000
-
-    kaspad:
-      container_name: kaspad
-      image: supertypo/kaspad:latest
-      restart: unless-stopped
-      ports:
-        - "16110:16110/tcp"
-        - "16111:16111/tcp"
-      volumes:
-        - kaspad:/app/data/
-
-  volumes:
-    kaspad:
 
