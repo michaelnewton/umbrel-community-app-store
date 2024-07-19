@@ -1,14 +1,21 @@
 version: "3.7"
 
 services:
-
   app_proxy:
     environment:
       # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_server_1
+      APP_HOST: kas-rusty-node_1
       APP_PORT: 3000
-    
-  server:
-    image: getumbrel/community-app-store-hello-world:latest
-    user: "1000:1000"
-    init: true
+
+  kaspad:
+    container_name: kaspad
+    image: supertypo/kaspad:latest
+    restart: unless-stopped
+    ports:
+      - "16110:16110/tcp"
+      - "16111:16111/tcp"
+    volumes:
+      - kaspad:/app/data/
+
+volumes:
+  kaspad:
