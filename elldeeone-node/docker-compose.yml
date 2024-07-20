@@ -4,7 +4,7 @@ services:
 
   app_proxy:
     environment:
-      APP_HOST:
+      APP_HOST: node_server_1
       APP_PORT:
 
   node:
