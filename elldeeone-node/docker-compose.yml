@@ -4,7 +4,7 @@ services:
 
   app_proxy:
     environment:
-      APP_HOST: node_server_1
+      APP_HOST: node_node_1
       APP_PORT: 3001
 
   node:

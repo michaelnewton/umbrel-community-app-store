@@ -4,7 +4,7 @@ services:
 
   app_proxy:
     environment:
-      APP_HOST: bridge-kas_server_1
+      APP_HOST: bridge-kas_bridge-kas_1
       APP_PORT: 3000
 
   bridge-kas:
