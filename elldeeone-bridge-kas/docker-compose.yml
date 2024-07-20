@@ -1,8 +1,8 @@
 version: "3.7"
 
 services:
-  kaspad:
-    container_name: kas-bridge
+  bridge-kas:
+    container_name: bridge-kas
     image: elldee/bridge:latest
     restart: unless-stopped
     ports:

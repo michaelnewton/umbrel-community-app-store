@@ -1,7 +1,7 @@
 manifestVersion: 1
-id: elldeeone-kas-bridge
-name: kas-bridge
-tagline: kas-bridge
+id: elldeeone-bridge-kas
+name: bridge-kas
+tagline: bridge-kas
 icon: https://svgur.com/i/mvA.svg
 category: Development
 version: "1.0.0"
