@@ -5,7 +5,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: node_server_1
-      APP_PORT:
+      APP_PORT: 3001
 
   node:
     container_name: node
