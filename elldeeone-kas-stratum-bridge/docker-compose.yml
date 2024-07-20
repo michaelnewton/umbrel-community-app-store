@@ -16,3 +16,11 @@ services:
       - "5555:5555"
       - "2114:2114"
 
+    command:
+      - '-log=true'
+      - '-stats=false'
+      - '-stratum=:5555'
+      - '-prom=:2114'
+      - '-kaspa=host.docker.internal:16110'
+      - '-mindiff=64'
+      - '-vardiff=true'
