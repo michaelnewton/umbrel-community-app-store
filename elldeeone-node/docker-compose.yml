@@ -2,11 +2,6 @@ version: "3.7"
 
 services:
 
-  app_proxy:
-    environment:
-      APP_HOST: node_node_1
-      APP_PORT: 3001
-
   node:
     container_name: node
     image: supertypo/kaspad:latest
