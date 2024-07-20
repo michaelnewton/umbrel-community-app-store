@@ -1,6 +1,12 @@
 version: "3.7"
 
 services:
+  
+  app_proxy:
+    environment:
+      APP_HOST:
+      APP_PORT:
+
   bridge-kas:
     container_name: bridge-kas
     image: elldee/bridge:latest
