@@ -1,7 +1,7 @@
 manifestVersion: 1
-id: elldeeone-test
-name: test
-tagline: test
+id: elldeeone-test1
+name: test1
+tagline: test1
 icon: https://svgur.com/i/mvA.svg
 category: Development
 version: "1.0.0"
