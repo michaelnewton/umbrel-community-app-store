@@ -1,18 +1,30 @@
-id: elldee-kaspa-stratum-bridge
+manifestVersion: 1
+id: elldeeone-kas-stratum-bridge
 name: Kaspa Stratum Bridge
-description: Kaspa Stratum Bridge for mining
-repository: https://github.com/rdugan/kaspa-stratum-bridge
-icon: https://example.com/icon.png
-category: utilities
-type: app
-docker_images:
-  kaspastratumbridge:
-    image: elldee/kaspa-stratum-bridge:latest
-    healthcheck:
-      path: /health
-      port: 2114  # Adjust this if your app has a specific healthcheck port
-ports:
-  2114/tcp: 2114
-  5555/tcp: 5555
-volumes:
-  config: /app/config
+tagline: Kaspa Stratum Bridge
+icon: https://svgur.com/i/mvA.svg
+category: Development
+version: "1.0.0"
+port: 2114
+description: >-
+  Add your app's description here.
+
+
+  You can also add newlines!
+
+developer: Test
+website: https://test.com
+submitter: Test
+submission: https://github.com/getumbrel/umbrel-hello-world-app
+repo: https://github.com/getumbrel/umbrel-hello-world-app
+support: https://github.com/getumbrel/umbrel-hello-world-app/issues
+gallery:
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+releaseNotes: >-
+  Add what's new in the latest version of your app here.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
