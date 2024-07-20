@@ -1,6 +1,14 @@
-version: '3.7'
+version: "3.7"
+
 services:
+  app_proxy:
+    environment:
+      # The format here is: <app-id>_<docker-service-name>_1
+      APP_HOST: elldeeone-kaspa-stratum-bridge_1
+      APP_PORT: 16110
+
   kaspa-stratum-bridge:
+    container_name: kaspa-stratum-bridge
     image: elldee/kaspa-stratum-bridge:latest
     ports:
       - "16110:16110/tcp"
@@ -16,5 +24,6 @@ services:
       - '-kaspa=host.docker.internal:16110'
       - '-mindiff=64'
       - '-vardiff=true'
+
 volumes:
   config:
