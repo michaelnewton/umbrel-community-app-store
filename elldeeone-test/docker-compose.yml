@@ -8,14 +8,6 @@ services:
     volumes:
       - "config:/app/config"
     restart: unless-stopped
-    command:
-      - '-log=true'
-      - '-stats=false'
-      - '-stratum=:5555'
-      - '-prom=:2114'
-      - '-kaspa=host.docker.internal:16110'
-      - '-mindiff=64'
-      - '-vardiff=true'
 
 volumes:
   config:
