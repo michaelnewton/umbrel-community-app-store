@@ -1,21 +1,12 @@
-version: "3.7"
-
+version: '3.7'
 services:
-  app_proxy:
-    environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: elldeeone-kas-stratum-bridge_1
-      APP_PORT: 2114
-
   kaspa-stratum-bridge:
-    container_name: kaspa-stratum-bridge
     image: elldee/kaspa-stratum-bridge:latest
-    restart: unless-stopped
     ports:
       - "2114:2114/tcp"
       - "5555:5555/tcp"
     volumes:
       - "config:/app/config"
-
+    restart: unless-stopped
 volumes:
   config:
