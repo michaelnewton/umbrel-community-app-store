@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: elldeeone-kaspa-stratum-bridge_1
+      APP_HOST: elldeeone-kas-stratum-bridge_1
       APP_PORT: 16110
 
   kaspa-stratum-bridge:
