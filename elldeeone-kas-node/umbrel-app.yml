@@ -1,7 +1,7 @@
 manifestVersion: 1
-id: elldeeone-kas-rusty-node
-name: Kaspa Rusty Node
-tagline: Kaspa Rusty Node
+id: elldeeone-kas-node
+name: Node
+tagline: Node
 icon: https://svgur.com/i/mvA.svg
 category: Development
 version: "1.0.0"
