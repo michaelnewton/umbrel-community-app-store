@@ -5,7 +5,7 @@ tagline: Kaspa Stratum Bridge
 icon: https://svgur.com/i/mvA.svg
 category: Development
 version: "1.0.0"
-port: 16110
+port: 2114
 description: >-
   Add your app's description here.
 
