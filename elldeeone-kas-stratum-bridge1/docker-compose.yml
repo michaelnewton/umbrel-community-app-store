@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  kaspa-stratum-bridge1:
+    image: elldee/kaspa-stratum-bridge:latest
+    ports:
+      - "2114:2114/tcp"
+      - "5555:5555/tcp"
+    volumes:
+      - "config:/app/config"
+    restart: unless-stopped
+    command:
+      - './stratum-bridge'
+      - '-log=true'
+      - '-stats=false'
+      - '-stratum=:5555'
+      - '-prom=:2114'
+      - '-kaspa=host.docker.internal:16110'
+      - '-mindiff=64'
+      - '-vardiff=true'
+
+volumes:
+  config:
