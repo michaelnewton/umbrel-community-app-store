@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  kaspa-stratum-bridge1:
+  kaspa-stratum-bridge2:
     image: elldee/kaspa-stratum-bridge:latest
     ports:
       - "2114:2114/tcp"
