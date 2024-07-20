@@ -1,12 +1,6 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: elldeeone-bridge
-      APP_PORT: 5555
-
   kaspad:
     container_name: bridge
     image: elldee/bridge:latest
