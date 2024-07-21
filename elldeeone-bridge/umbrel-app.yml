@@ -1,16 +1,13 @@
 manifestVersion: 1
 id: elldeeone-bridge
-name: bridge
-tagline: bridge
+name: Kaspa Bridge
+tagline: Kaspa Bridge
 icon: https://svgshare.com/i/18Sc.svg
 category: Development
 version: "1.0.0"
 port: 5555
 description: >-
-  Add your app's description here.
-
-
-  You can also add newlines!
+This is a lightweight daemon that allows mining to a local (or remote) kaspa node using stratum-base miners.
 
 developer: Kaspa
 website: https://test.com
