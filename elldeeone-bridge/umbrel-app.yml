@@ -1,7 +1,7 @@
 manifestVersion: 1
-id: elldeeone-bridge-kas
-name: bridge-kas
-tagline: bridge-kas
+id: elldeeone-bridge
+name: bridge
+tagline: bridge
 icon: https://svgshare.com/i/18Sc.svg
 category: Development
 version: "1.0.0"
@@ -12,7 +12,7 @@ description: >-
 
   You can also add newlines!
 
-developer: Test
+developer: Kaspa
 website: https://test.com
 submitter: Test
 submission: https://github.com/getumbrel/umbrel-hello-world-app

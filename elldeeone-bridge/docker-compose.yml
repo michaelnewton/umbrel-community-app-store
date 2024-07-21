@@ -2,8 +2,8 @@ version: "3.7"
 
 services:
 
-  bridge-kas:
-    container_name: bridge-kas
+  bridge:
+    container_name: bridge
     image: elldee/bridge:latest
     restart: unless-stopped
     ports:
