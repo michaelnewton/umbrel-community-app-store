@@ -5,7 +5,7 @@ tagline: Kaspa Monitoring
 icon: https://svgshare.com/i/18Sc.svg
 category: Development
 version: "1.0.0"
-port: 5555
+port: 3000
 description: >-
   This is a lightweight daemon that allows mining to a local (or remote) kaspa node using stratum-base miners.
 
