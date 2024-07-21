@@ -7,7 +7,7 @@ category: Development
 version: "1.0.0"
 port: 5555
 description: >-
-This is a lightweight daemon that allows mining to a local (or remote) kaspa node using stratum-base miners.
+  This is a lightweight daemon that allows mining to a local (or remote) kaspa node using stratum-base miners.
 
 developer: Kaspa
 website: https://test.com
