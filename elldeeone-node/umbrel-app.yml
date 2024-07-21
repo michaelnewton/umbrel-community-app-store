@@ -1,27 +1,24 @@
 manifestVersion: 1
 id: elldeeone-node
-name: Node
-tagline: Node
+name: Rusty Kaspa Node
+tagline: Rusty Kaspa Node
 icon: https://svgshare.com/i/18Sc.svg
 category: Development
 version: "1.0.0"
 port: 4000
 description: >-
-  Add your app's description here.
+  Rust-based implementation of the Kaspa full-node.
 
-
-  You can also add newlines!
-
-developer: Test
+developer: Kaspa
 website: https://test.com
 submitter: Test
 submission: https://github.com/getumbrel/umbrel-hello-world-app
 repo: https://github.com/getumbrel/umbrel-hello-world-app
 support: https://github.com/getumbrel/umbrel-hello-world-app/issues
 gallery:
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://wiki.kaspa.org/valid.png
+  - https://wiki.kaspa.org/b.png
+  - https://wiki.kaspa.org/d.png
 releaseNotes: >-
   Add what's new in the latest version of your app here.
 dependencies: []
