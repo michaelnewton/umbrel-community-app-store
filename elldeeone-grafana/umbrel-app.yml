@@ -1,13 +1,13 @@
 manifestVersion: 1
-id: elldeeone-monitoring
-name: Kaspa Monitoring
+id: elldeeone-grafana
+name: Grafana
 tagline: Kaspa Monitoring
 icon: https://svgshare.com/i/18Sc.svg
 category: Development
 version: "1.0.0"
 port: 3000
 description: >-
-  This is a lightweight daemon that allows mining to a local (or remote) kaspa node using stratum-base miners.
+  Grafana
 
 developer: Kaspa
 website: https://test.com
