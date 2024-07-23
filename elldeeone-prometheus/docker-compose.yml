@@ -1,15 +1,15 @@
-version: "3.7"
+version: "3.8"
 services:
-   prometheus:
+  prometheus:
     image: prom/prometheus:latest
     container_name: ks_prom
     restart: unless-stopped
     volumes:
       - "prometheus_data:/prometheus"
-      - "./docker/prometheus.yml:/etc/prometheus/prometheus.yml"
+      - "/usr/local/lib/node_modules/umbreld/source/modules/apps/legacy-compat/docker/prometheus.yml:/etc/prometheus/prometheus.yml"
     ports:
       - "9090:9090"
     extra_hosts:
       - "host.docker.internal:host-gateway"
 volumes:
-  prometheus_data:
+  prometheus_data: {}
