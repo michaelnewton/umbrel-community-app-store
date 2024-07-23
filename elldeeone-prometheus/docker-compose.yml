@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     volumes:
       - "prometheus_data:/prometheus"
-      - "./docker/prometheus.yml:/etc/prometheus/prometheus.yml"
+      - "./docker/prometheus.yml:/etc/prometheus/docker/prometheus.yml"
     ports:
       - "9090:9090"
     extra_hosts:
