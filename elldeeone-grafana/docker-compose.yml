@@ -9,8 +9,8 @@ services:
     ports:
       - "3000:3000/tcp"
     volumes:
-      - "./usr/share/grafana/grafana/grafana:/var/lib/grafana"
+      - "./grafana/grafana:/var/lib/grafana"
     env_file:
-      - "./usr/share/grafana/grafana/grafana.env"
+      - "./grafana/grafana.env"
     extra_hosts:
       - "host.docker.internal:host-gateway"
