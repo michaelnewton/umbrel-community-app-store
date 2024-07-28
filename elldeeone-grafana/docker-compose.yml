@@ -3,14 +3,14 @@ version: "3.7"
 services:
   grafana:
     container_name: ks_grafana
-    image: grafana/grafana-oss:latest
+    image: elldee/grafana:latest
     restart: unless-stopped
     user: "0"
     ports:
       - "3000:3000/tcp"
     volumes:
-      - "./buildfiles/grafana:/var/lib/grafana"
+      - "./usr/share/grafana/grafana/grafana:/var/lib/grafana"
     env_file:
-      - "./grafana/grafana.env"
+      - "./usr/share/grafana/grafana/grafana.env"
     extra_hosts:
       - "host.docker.internal:host-gateway"
