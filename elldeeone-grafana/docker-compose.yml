@@ -11,6 +11,6 @@ services:
     volumes:
       - "./grafana/grafana:/var/lib/grafana"
     env_file:
-      - "./grafana/grafana.env"
+      - "./grafana/grafana/grafana.env:/grafana/grafana.env"
     extra_hosts:
       - "host.docker.internal:host-gateway"
