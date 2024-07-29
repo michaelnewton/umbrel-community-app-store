@@ -3,15 +3,10 @@ version: "3.7"
 services:
   grafana:
     container_name: ks_grafana
-    image: elldee/grafana:latest
+    image: grafana/grafana-oss:latest
     restart: unless-stopped
     user: "0"
     ports:
       - "3000:3000/tcp"
-    volumes:
-      - "./grafana/grafana:/var/lib/grafana"
-    environment:
-      - GF_AUTH_ANONYMOUS_ENABLED=true
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    entrypoint: ["tail", "-f", "/dev/null"]
