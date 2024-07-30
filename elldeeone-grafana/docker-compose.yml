@@ -7,9 +7,7 @@ services:
     restart: unless-stopped
     user: "0"
     environment:
-      - GF_PATHS_DATA=/var/lib/grafana
-    volumes:
-      - "./buildfiles/grafana:/var/lib/grafana"
+      - GF_PATHS_DATA=/grafana/buildfiles
     ports:
       - "3000:3000/tcp"
     extra_hosts:
