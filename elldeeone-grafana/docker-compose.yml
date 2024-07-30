@@ -6,10 +6,10 @@ services:
     image: elldee/grafana:latest
     restart: unless-stopped
     user: "0"
-    volumes:
-      - "./buildfiles:/buildfiles"
     environment:
-      - GF_PATHS_DATA=/buildfiles/grafana
+      - GF_PATHS_DATA=/var/lib/grafana
+    volumes:
+      - "./buildfiles/grafana:/var/lib/grafana"
     ports:
       - "3000:3000/tcp"
     extra_hosts:
