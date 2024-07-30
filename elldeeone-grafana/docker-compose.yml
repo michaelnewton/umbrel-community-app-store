@@ -7,8 +7,11 @@ services:
     restart: unless-stopped
     user: "0"
     volumes:
-      - "./buildfiles/grafana:/var/lib/grafana"
+      - "buildfiles:/var/lib/grafana"
     ports:
       - "3000:3000/tcp"
     extra_hosts:
       - "host.docker.internal:host-gateway"
+
+volumes:
+  buildfiles:
