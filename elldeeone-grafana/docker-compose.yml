@@ -6,8 +6,8 @@ services:
     image: elldee/grafana:latest
     restart: unless-stopped
     user: "0"
-    environment:
-      - GF_PATHS_DATA=/grafana/buildfiles
+    volumes:
+      - ./docker/grafana:/var/lib/grafana
     ports:
       - "3000:3000/tcp"
     extra_hosts:
