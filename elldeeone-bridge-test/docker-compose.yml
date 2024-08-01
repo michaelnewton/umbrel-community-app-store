@@ -1,10 +1,10 @@
 version: "3.7"
 services:
-  ks_bridge:
+  bridge:
     build:
       context: .
       dockerfile: Dockerfile  # Ensure this points to your Dockerfile
-    container_name: ks_bridge
+    container_name: bridge-test
     restart: unless-stopped
     ports:
       - "5555:5555"
