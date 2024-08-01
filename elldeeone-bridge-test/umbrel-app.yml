@@ -1,6 +1,6 @@
 manifestVersion: 1
-id: elldeeone-bridge
-name: Kaspa Bridge
+id: elldeeone-bridge-test
+name: Kaspa Bridge Test
 tagline: Kaspa Bridge
 icon: https://svgshare.com/i/18Sc.svg
 category: Development
