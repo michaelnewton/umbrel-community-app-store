@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  bridge:
+  bridge-test:
     build:
       context: .
       dockerfile: Dockerfile  # Ensure this points to your Dockerfile
