@@ -1,16 +1,28 @@
 version: "3.7"
-
 services:
   grafana:
     container_name: ks_grafana
-    image: elldee/grafana:latest
+    image: grafana/grafana-oss:latest
     restart: unless-stopped
     user: "0"
     volumes:
-      - grafana_data:/var/lib/grafana
+      - grafana_data-test:/var/lib/grafana
     ports:
       - "3000:3000/tcp"
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    entrypoint: >
+      sh -c "
+      if [ ! -d /var/lib/grafana/docker ]; then
+        mkdir -p /var/lib/grafana/docker && 
+        git init /var/lib/grafana/docker && 
+        cd /var/lib/grafana/docker && 
+        git remote add origin https://github.com/onemorebsmith/kaspa-stratum-bridge.git &&
+        git config core.sparseCheckout true && 
+        echo 'docker/' >> .git/info/sparse-checkout &&
+        git pull origin main; 
+      fi &&
+      /run.sh"
+
 volumes:
-  grafana_data:
+  grafana_data-test:
