@@ -1,17 +1,21 @@
-# Use a Node.js base image with Debian Buster
-FROM node:14-buster
+FROM golang:1.19.1 as builder
 
-# Set the working directory
-WORKDIR /app
+LABEL org.opencontainers.image.description="Dockerized Kaspa Stratum Bridge"      
+LABEL org.opencontainers.image.authors="onemorebsmith"  
+LABEL org.opencontainers.image.source="https://github.com/onemorebsmith/kaspa-stratum-bridge"
+              
+WORKDIR /go/src/app
+ADD go.mod .
+ADD go.sum .
+RUN go mod download
 
-# Clone the repository (assuming Git is available on UmbrelOS)
-RUN git clone https://github.com/rdugan/kaspa-stratum-bridge.git .
+ADD . .
+RUN go build -o /go/bin/app ./cmd/kaspabridge
 
-# Install dependencies
-RUN npm install
 
-# Expose necessary ports
-EXPOSE 5555 2114
+FROM gcr.io/distroless/base:nonroot
+COPY --from=builder /go/bin/app /
+COPY cmd/kaspabridge/config.yaml /
 
-# Start the application
-CMD ["node", "src/index.js"]
+WORKDIR /
+ENTRYPOINT ["/app"]
