@@ -1,15 +1,15 @@
 manifestVersion: 1
-id: elldeeone-grafana
-name: Grafana
+id: elldeeone-grafana-test
+name: Grafana-Test
 tagline: Kaspa Monitoring
 icon: https://svgshare.com/i/18Sc.svg
 category: Development
 version: "1.0.0"
 port: 3000
 description: >-
-  Grafana
+  Grafana-Test
 
-developer: Kaspa
+developer: Kaspa-Test
 website: https://test.com
 submitter: Test
 submission: https://github.com/getumbrel/umbrel-hello-world-app
