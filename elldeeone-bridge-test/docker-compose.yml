@@ -1,18 +1,13 @@
-version: "3.7"
+version: "3.9"
 services:
-  bridge-test:
+  ks_bridge:
     build:
       context: .
-      dockerfile: Dockerfile  # Ensure this points to your Dockerfile
-    container_name: bridge-test
+      dockerfile: Dockerfile
+    container_name: ks_bridge
     restart: unless-stopped
     ports:
       - "5555:5555"
       - "2114:2114"
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    volumes:
-      - "config:/app/config"
-
-volumes:
-  config:
