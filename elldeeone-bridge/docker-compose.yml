@@ -6,11 +6,12 @@ services:
     container_name: bridge
     image: elldee/bridge:latest
     restart: unless-stopped
+    user: "0"
+    command:
+      - '-stats=false'
+      - '-kaspa=host.docker.internal:16110'
     ports:
-      - "5555:5555/tcp"
-      - "2114:2114/tcp"
-    volumes:
-      - "config:/app/config"
-
-volumes:
-  config:
+      - 5555:5555
+      - 2114:2114
+    extra_hosts:
+      - host.docker.internal:host-gateway
