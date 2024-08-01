@@ -3,11 +3,11 @@ version: "3.7"
 services:
   grafana-test:
     container_name: ks_grafana-test
-    image: grafana/grafana-oss:latest
+    image: elldee/grafana:latest
     restart: unless-stopped
     user: "0"
     volumes:
-      - grafana_data:/var/lib/grafana
+      - grafana_data-test:/var/lib/grafana
     ports:
       - "3000:3000/tcp"
     extra_hosts:
@@ -15,8 +15,6 @@ services:
     entrypoint: >
       sh -c "
       if [ ! -d /var/lib/grafana/docker ]; then
-        apt-get update && 
-        apt-get install -y git && 
         mkdir -p /var/lib/grafana/docker && 
         git init /var/lib/grafana/docker && 
         cd /var/lib/grafana/docker && 
@@ -28,4 +26,4 @@ services:
       /run.sh"
 
 volumes:
-  grafana_data:
+  grafana_data-test:
