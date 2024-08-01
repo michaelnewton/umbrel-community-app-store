@@ -1,14 +1,16 @@
 version: "3.7"
-
 services:
-
-  bridge:
-    container_name: bridge
-    image: elldee/bridge:latest
+  ks_bridge:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Ensure this points to your Dockerfile
+    container_name: ks_bridge
     restart: unless-stopped
     ports:
-      - "5555:5555/tcp"
-      - "2114:2114/tcp"
+      - "5555:5555"
+      - "2114:2114"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - "config:/app/config"
 
