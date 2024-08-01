@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     user: "0"
     volumes:
-      - grafana_data-test:/var/lib/grafana
+      - grafana_data:/var/lib/grafana
     ports:
       - "3000:3000/tcp"
     extra_hosts:
@@ -25,4 +25,4 @@ services:
       /run.sh"
 
 volumes:
-  grafana_data-test:
+  grafana_data:
