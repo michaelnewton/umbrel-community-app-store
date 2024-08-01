@@ -3,7 +3,7 @@ version: "3.7"
 services:
   grafana-test:
     container_name: ks_grafana-test
-    image: elldee/grafana:latest
+    image: grafana/grafana-oss:latest
     restart: unless-stopped
     user: "0"
     volumes:
