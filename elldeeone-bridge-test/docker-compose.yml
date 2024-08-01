@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+
+  bridge:
+    container_name: bridge
+    image: elldee/bridge:latest
+    restart: unless-stopped
+    ports:
+      - "5555:5555/tcp"
+      - "2114:2114/tcp"
+    volumes:
+      - "config:/app/config"
+
+volumes:
+  config:
