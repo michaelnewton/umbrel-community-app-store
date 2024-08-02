@@ -7,9 +7,11 @@ services:
     container_name: ks_prom
     restart: unless-stopped
     volumes:
-      - ${APP_DATA_DIR}/data:/prometheus
+      - "prometheus_data:/prometheus"
       - ${APP_DATA_DIR}/data/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - 9090:9090
     extra_hosts:
       - host.docker.internal:host-gateway
+volumes:
+  prometheus_data: {}
