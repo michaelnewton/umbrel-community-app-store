@@ -1,6 +1,8 @@
 version: "3.8"
 
-prometheus:
+services:
+
+  prometheus:
     image: prom/prometheus:latest
     container_name: ks_prom
     restart: unless-stopped
