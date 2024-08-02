@@ -7,7 +7,7 @@ category: Development
 version: "1.0.0"
 port: 3000
 description: >-
-  Grafana
+  Grafana-Test
 
 developer: Kaspa
 website: https://test.com
