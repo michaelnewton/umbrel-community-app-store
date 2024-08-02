@@ -1,13 +1,13 @@
 manifestVersion: 1
-id: elldeeone-prometheus
-name: Prometheus
+id: elldeeone-grafana-test
+name: Grafana
 tagline: Kaspa Monitoring
 icon: https://svgshare.com/i/18Sc.svg
 category: Development
 version: "1.0.0"
 port: 3000
 description: >-
-  Prometheus
+  Grafana
 
 developer: Kaspa
 website: https://test.com
