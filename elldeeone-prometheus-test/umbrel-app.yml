@@ -1,6 +1,6 @@
 manifestVersion: 1
-id: elldeeone-prometheus
-name: Prometheus
+id: elldeeone-prometheus-test
+name: Prometheus-test
 tagline: Kaspa Monitoring
 icon: https://svgshare.com/i/18Sc.svg
 category: Development
