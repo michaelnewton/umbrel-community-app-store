@@ -19,7 +19,9 @@ gallery:
   - https://github.com/rdugan/kaspa-stratum-bridge/raw/main/docs/images/dashboard.png
 releaseNotes: >-
   Add what's new in the latest version of your app here.
-dependencies: []
+dependencies:
+  - elldeeone-node
+  - elldeeone-bridge
 path: ""
 defaultUsername: ""
 defaultPassword: ""
